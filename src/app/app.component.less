@@ -1,0 +1,41 @@
+.wrapper {
+  //background-color: #000;
+
+  .container {
+    .content {
+      overflow: hidden;
+
+      .infoPanel {
+        display: flex;
+        align-items: flex-start;
+
+        padding: 16px 16px 15px 16px;
+
+        //background-color: #fff;
+
+        .infoBlocks {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////adaptive
+@media all and (max-width: 767px) {
+  .wrapper {
+    .container {
+      .content {
+        .infoPanel {
+          flex-wrap: wrap;
+          justify-content: center;
+
+          > *:not(.infoBlocks) {
+            margin: 0 15px 20px 15px;
+          }
+        }
+      }
+    }
+  }
+}

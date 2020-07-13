@@ -1,0 +1,49 @@
+:host {
+  @urlIconProfile: url("../../assets/img/user.svg");
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      position: relative;
+
+      text-transform: uppercase;
+
+      > a {
+        padding: 0 16px;
+
+        font-size: 14px;
+        color: #fff;
+      }
+
+      &.profile {
+        > a {
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+
+          padding: 0;
+          margin-left: 18px;
+
+          color: transparent;
+          background: @urlIconProfile no-repeat center;
+        }
+      }
+
+      &:not(:last-child):after {
+        content: "";
+
+        display: block;
+        width: 1px;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        background-color: #fff;
+      }
+    }
+  }
+}

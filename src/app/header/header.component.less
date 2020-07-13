@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px 15px;
+
+  background-color: #000;
+
+  .logo {
+    > a {
+      display: inline-block;
+      height: 20px;
+      width: 100px;
+
+      background: url("../../assets/img/logo.svg") no-repeat right top;
+    }
+  }
+
+  .latestNews {
+    color: #fff;
+    font-size: 14px;
+
+    > span {
+      margin: 0 0 0 7px;
+
+      font-style: italic;
+    }
+  }
+}
+
+//////////////////////////////////////adaptive
+@media all and (max-width: 767px) {
+  .header {
+    flex-wrap: wrap;
+
+    .latestNews {
+      display: none;
+    }
+  }
+}
